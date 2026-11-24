@@ -19,8 +19,10 @@
 - Use existing components before creating new ones.
 - Avoid unnecessary dependencies, state, effects, and abstractions.
 - Do not modify unrelated files or functionality.
+- Make network requests only when necessary.
 
 ## UI and Design
+- During UI development, prioritize speed of implementation and fidelity to the approved design.
 - All UI must be responsive down to 320px viewport width.
 - Use mobile-first responsive design and avoid horizontal overflow.
 - Maintain accessible contrast, semantic HTML, and visible keyboard focus.
@@ -41,16 +43,20 @@
 - Do not perform destructive file operations without explicit approval.
 
 ## Verification
-- Run available lint, TypeScript, and production build checks after code changes.
+- Run available ESLint, TypeScript, and production build checks when the user requests them or before completing a major milestone.
 - Run relevant existing tests when available.
 - For UI changes, verify responsive layout, keyboard navigation, and relevant links when possible.
+- Run automated browser checks only when the user explicitly requests them.
+- Do not create temporary test scripts.
 - Report errors and warnings separately.
 - Summarize modified files and checks performed.
 - Clearly state what was not verified.
-- Do not create Git commits or push changes unless explicitly requested.
+- Do not create Git commits or push changes without the user's explicit permission.
 
 ## Communication
 - Explain architectural decisions briefly.
-- For larger tasks, propose a plan before implementation.
+- Start implementation immediately for small, clear tasks without waiting for plan approval.
+- Request plan approval only for major architectural changes.
 - Keep changes focused on the requested task.
 - Ask for clarification when requirements are ambiguous or changes could affect existing functionality.
+- After implementation, briefly report what was done, which files changed, and any issues found.
