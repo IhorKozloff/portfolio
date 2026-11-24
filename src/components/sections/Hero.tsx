@@ -35,7 +35,7 @@ const actions = [
 
 export function Hero() {
   return (
-    <Container className="pt-6 pb-10 sm:pt-10 sm:pb-14">
+    <Container className="pt-6 pb-15 sm:pt-10 sm:pb-21">
       <section
         aria-labelledby="hero-heading"
         className="relative isolate overflow-hidden rounded-card border border-border/75 bg-surface px-gutter py-6 sm:py-9 lg:py-10"

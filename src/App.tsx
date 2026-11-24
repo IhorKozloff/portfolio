@@ -1,4 +1,5 @@
 import { Header } from './components/layout/Header'
+import { About } from './components/sections/About'
 import { Hero } from './components/sections/Hero'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <About />
       </main>
     </div>
   )
