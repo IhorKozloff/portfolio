@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B1119;
+  --color-hero-background: #152231;
+  --color-surface: #131E2B;
+  --color-elevated-surface: #1C2C3C;
+  --color-border: #2C4053;
+  --color-primary: #93B4D0;
+  --color-primary-hover: #B5CFE5;
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #A0B1C2;
+
+  --font-sans: Inter, system-ui, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --container-content: 80rem;
+  --radius-card: 0.875rem;
+  --shadow-card: 0 4px 12px color-mix(in srgb, var(--color-background) 45%, transparent);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background font-sans text-base text-text-primary antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-primary;
+  }
+}
+
+@utility px-gutter {
+  padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+@utility py-section {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
