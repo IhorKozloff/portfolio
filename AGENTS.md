@@ -28,7 +28,7 @@
 - Maintain accessible contrast, semantic HTML, and visible keyboard focus.
 - Provide meaningful alternative text for informative images.
 - Support reduced-motion preferences for animations.
-- Follow the approved design system and maintain consistent typography, spacing, and colors.
+- Follow the approved Cyber Aurora + Bento Grid design system. Use near-black surfaces, blue and violet accents, and subtle local glows while maintaining consistent typography and spacing. Avoid pink, orange, yellow, and excessive neon effects.
 - Prioritize readability, clear visual hierarchy, and project presentation over decorative effects.
 - Do not introduce or change the global theme without explicit approval.
 - Optimize images and avoid unnecessary animation or large assets.

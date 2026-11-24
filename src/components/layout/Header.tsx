@@ -5,7 +5,7 @@ import { Button } from '../ui/Button'
 import { Container } from '../ui/Container'
 
 const linkClasses = 'flex min-h-11 items-center gap-1 rounded-sm px-2 text-sm'
-const activeLinkClasses = 'text-text-secondary hover:text-primary motion-safe:transition-colors'
+const activeLinkClasses = 'text-text-secondary hover:bg-surface hover:text-text-primary motion-safe:transition-colors'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,11 +27,11 @@ export function Header() {
       <Container className="flex min-h-16 flex-wrap items-center justify-between gap-x-4 lg:flex-nowrap">
         <a
           href="#top"
-          className="inline-flex min-h-11 items-center gap-1 rounded-sm font-mono text-xl font-bold"
+          className="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 text-2xl font-bold tracking-tight hover:bg-surface motion-safe:transition-colors"
           aria-label="IK, back to top"
         >
           IK
-          <span aria-hidden="true" className="size-1.5 self-center rounded-full bg-primary" />
+          <span aria-hidden="true" className="size-2.5 rounded-full bg-primary bg-aurora" />
         </a>
 
         <button
@@ -40,7 +40,7 @@ export function Header() {
           aria-controls={navigationId}
           aria-expanded={isOpen}
           aria-label={isOpen ? 'Close navigation' : 'Open navigation'}
-          className="grid size-11 place-items-center rounded-lg border border-border text-primary hover:bg-surface motion-safe:transition-colors lg:hidden"
+          className="grid size-11 place-items-center rounded-lg border border-border text-accent-light hover:bg-surface motion-safe:transition-colors lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
@@ -72,11 +72,11 @@ export function Header() {
               GitHub <ArrowUpRight size={16} aria-hidden="true" />
             </a>
             {headerLinks.resume ? (
-              <Button href={headerLinks.resume} variant="secondary" onClick={closeMenu}>
+              <Button href={headerLinks.resume} variant="primary" onClick={closeMenu}>
                 Resume
               </Button>
             ) : (
-              <Button variant="secondary" disabled>
+              <Button variant="primary" disabled>
                 Resume
               </Button>
             )}

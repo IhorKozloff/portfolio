@@ -1,8 +1,8 @@
 import type { ComponentPropsWithoutRef } from 'react'
 
 const variantClasses = {
-  primary: 'border-primary bg-primary text-background not-disabled:hover:bg-primary-hover',
-  secondary: 'border-primary bg-surface text-primary not-disabled:hover:bg-elevated-surface',
+  primary: 'border-transparent bg-primary bg-aurora text-background not-disabled:hover:brightness-110 forced-colors:border-[ButtonText]',
+  secondary: 'border-border bg-elevated-surface text-text-primary not-disabled:hover:border-accent-light',
 }
 
 type ButtonStyleProps = {
@@ -15,7 +15,7 @@ type ButtonProps = ButtonStyleProps & (
 )
 
 export function Button({ variant = 'primary', className = '', ...props }: ButtonProps) {
-  const classes = `inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-lg border px-4 py-2 wrap-anywhere text-center text-sm font-semibold motion-safe:transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${variantClasses[variant]} ${className}`
+  const classes = `inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-lg border px-4 py-2 wrap-anywhere text-center text-sm font-semibold motion-safe:transition-[border-color,filter] disabled:cursor-not-allowed disabled:saturate-75 ${variantClasses[variant]} ${className}`
 
   if (typeof props.href === 'string') {
     return <a className={classes} {...props} />
