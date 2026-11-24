@@ -24,7 +24,11 @@
   }
 
   body {
-    @apply bg-background font-sans text-base text-text-primary antialiased;
+    @apply min-h-dvh bg-background font-sans text-base text-text-primary antialiased;
+    background-image:
+      radial-gradient(ellipse 60rem 48rem at 8% 8rem, color-mix(in srgb, var(--color-primary) 15%, transparent), transparent 75%),
+      radial-gradient(ellipse 56rem 54rem at 95% 24rem, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 75%);
+    background-repeat: no-repeat;
   }
 
   :focus-visible {

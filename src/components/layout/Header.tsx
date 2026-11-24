@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <header
-      className="sticky top-0 z-10 border-b border-border bg-background"
+      className="sticky top-0 z-10 border-b border-border/70 bg-background/85 backdrop-blur-sm"
       onKeyDown={(event) => {
         if (event.key === 'Escape' && isOpen && menuButton.current?.getClientRects().length) {
           event.preventDefault()

@@ -1,6 +1,7 @@
 import { Header } from './components/layout/Header'
-import { About } from './components/sections/About'
 import { Hero } from './components/sections/Hero'
+import { TechnicalSkills } from './components/sections/TechnicalSkills'
+import { SectionDivider } from './components/ui/SectionDivider'
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
+        <SectionDivider />
+        <TechnicalSkills />
       </main>
     </div>
   )
