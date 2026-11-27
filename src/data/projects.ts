@@ -1,0 +1,80 @@
+import type { Project } from '../types/project'
+
+export const projects: readonly Project[] = [
+  {
+    id: 'pc-architect',
+    slug: 'pc-architect',
+    title: 'PC Architect',
+    category: 'Full Stack PC Building Platform',
+    description: 'A full-stack web application for creating, customizing and managing personal computer builds, with secure authentication, database integration and automated testing.',
+    featured: true,
+    features: [
+      'Custom PC configuration',
+      'Hardware component selection',
+      'User authentication and authorization',
+      'Personal build management',
+      'Responsive user interface',
+    ],
+    engineeringHighlights: [
+      'Next.js App Router architecture',
+      'PostgreSQL database with Prisma ORM',
+      'Unit, integration and E2E testing',
+      'Docker containerization',
+      'CI/CD with GitHub Actions',
+    ],
+    technologies: [
+      'Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Prisma',
+      'PostgreSQL', 'Jest', 'React Testing Library', 'Playwright', 'Docker', 'GitHub Actions',
+    ],
+  },
+  {
+    id: 'cursology',
+    slug: 'cursology',
+    title: 'Cursology',
+    category: 'Full Stack Educational Platform',
+    description: 'A full-stack educational web application built with a modern React frontend, REST API and MongoDB database.',
+    featured: true,
+    engineeringHighlights: [
+      'Type-safe frontend and backend development',
+      'Centralized state management with Redux Toolkit',
+      'API integration with RTK Query',
+      'REST API with Node.js and Express.js',
+      'Reusable UI components with Storybook',
+      'MongoDB database integration',
+    ],
+    technologies: [
+      'React', 'TypeScript', 'Redux Toolkit', 'RTK Query', 'Tailwind CSS',
+      'Storybook', 'Node.js', 'Express.js', 'MongoDB',
+    ],
+  },
+  {
+    id: 'wallet',
+    slug: 'wallet',
+    title: 'Wallet',
+    category: 'Personal Finance Application',
+    description: 'A full-stack application for managing personal finances.',
+    featured: false,
+    technologies: [
+      'React', 'TypeScript', 'Redux Toolkit', 'RTK Query', 'Styled Components',
+      'Node.js', 'Express.js', 'MongoDB', 'Jest',
+    ],
+  },
+  {
+    id: 'movie-library',
+    slug: 'movie-library',
+    title: 'Movie Library',
+    category: 'Movie Discovery Application',
+    description: 'A web application for discovering movies and exploring movie information.',
+    featured: false,
+    technologies: ['React', 'React Router', 'Redux', 'Redux Persist', 'Axios', 'Formik', 'Tailwind CSS'],
+  },
+  {
+    id: 'w-clear',
+    slug: 'w-clear',
+    title: 'W-Clear',
+    category: 'Weather Application',
+    description: 'A multilingual weather application with a season-based user interface.',
+    featured: false,
+    technologies: ['JavaScript', 'HTML5', 'CSS3', 'SASS'],
+  },
+]
