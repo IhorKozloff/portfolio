@@ -1,4 +1,5 @@
 import { Header } from './components/layout/Header'
+import { Contact } from './components/sections/Contact'
 import { FeaturedProjects } from './components/sections/FeaturedProjects'
 import { Hero } from './components/sections/Hero'
 import { TechnicalSkills } from './components/sections/TechnicalSkills'
@@ -17,6 +18,7 @@ function App() {
         <FeaturedProjects />
         <SectionDivider />
         <WorkExperience />
+        <Contact />
       </main>
     </div>
   )

@@ -28,6 +28,7 @@ const actions = [
     href: headerLinks.resume,
     variant: 'secondary',
     icon: Download,
+    download: true,
   },
 ] as const
 
@@ -69,7 +70,12 @@ export function Hero() {
                 )
 
                 return action.href ? (
-                  <Button key={action.label} href={action.href} variant={action.variant}>
+                  <Button
+                    key={action.label}
+                    href={action.href}
+                    variant={action.variant}
+                    download={'download' in action ? action.download : undefined}
+                  >
                     {content}
                   </Button>
                 ) : (

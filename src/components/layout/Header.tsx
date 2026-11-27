@@ -72,7 +72,7 @@ export function Header() {
               GitHub <ArrowUpRight size={16} aria-hidden="true" />
             </a>
             {headerLinks.resume ? (
-              <Button href={headerLinks.resume} variant="primary" onClick={closeMenu}>
+              <Button href={headerLinks.resume} variant="primary" download onClick={closeMenu}>
                 Resume
               </Button>
             ) : (
