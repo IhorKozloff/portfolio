@@ -1,3 +1,4 @@
+import { Footer } from './components/layout/Footer'
 import { Header } from './components/layout/Header'
 import { Contact } from './components/sections/Contact'
 import { FeaturedProjects } from './components/sections/FeaturedProjects'
@@ -20,6 +21,7 @@ function App() {
         <WorkExperience />
         <Contact />
       </main>
+      <Footer />
     </div>
   )
 }
