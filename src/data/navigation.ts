@@ -6,7 +6,7 @@ type NavigationItem = {
 export const navigationItems: readonly NavigationItem[] = [
   { label: 'Stack', href: '#stack' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Experience' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Contact' },
 ]
 
