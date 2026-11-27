@@ -14,18 +14,28 @@ export function ProjectTechnologies({ technologies }: Pick<Project, 'technologie
   )
 }
 
-export function ProjectLinks({ title, liveUrl, githubUrl, detailsUrl }: Pick<Project, 'title' | 'liveUrl' | 'githubUrl' | 'detailsUrl'>) {
-  if (!liveUrl && !githubUrl && !detailsUrl) return null
+function isProjectUrl(href: string | undefined): href is string {
+  if (!href) return false
 
+  try {
+    const { protocol } = new URL(href)
+    return protocol === 'https:' || protocol === 'http:'
+  } catch {
+    return false
+  }
+}
+
+export function ProjectLinks({ title, liveUrl, githubUrl }: Pick<Project, 'title' | 'liveUrl' | 'githubUrl'>) {
   const links = [
     { label: 'Live Demo', href: liveUrl },
     { label: 'GitHub', href: githubUrl },
-    { label: 'View Details', href: detailsUrl },
-  ]
+  ].filter((link): link is { label: string; href: string } => isProjectUrl(link.href))
+
+  if (!links.length) return null
 
   return (
     <div className="mt-auto flex flex-wrap gap-2 pt-4">
-      {links.map(({ label, href }) => href && (
+      {links.map(({ label, href }) => (
         <Button key={label} href={href} variant="secondary" aria-label={`${label} for ${title}`}>
           {label}
         </Button>

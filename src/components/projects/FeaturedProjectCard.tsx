@@ -8,12 +8,8 @@ type FeaturedProjectCardProps = {
 }
 
 export function FeaturedProjectCard({ project, previewOnRight }: FeaturedProjectCardProps) {
-  const { slug, title, category, description, features, engineeringHighlights, technologies } = project
+  const { slug, title, category, description, highlights, technologies } = project
   const headingId = `project-${slug}`
-  const highlights = [
-    { label: 'Key Features', items: features },
-    { label: 'Engineering Highlights', items: engineeringHighlights },
-  ]
 
   return (
     <article
@@ -23,21 +19,18 @@ export function FeaturedProjectCard({ project, previewOnRight }: FeaturedProject
       <div className={previewOnRight ? 'min-w-0 md:order-last' : 'min-w-0'}>
         <ProjectPreview {...project} />
       </div>
-      <div className="grid min-w-0 gap-4">
+      <div className="grid min-w-0 gap-3">
         <div>
           <p className="mb-2 text-xs font-semibold tracking-widest text-accent-light">FEATURED PROJECT</p>
           <h3 id={headingId} className="text-2xl font-semibold tracking-tight lg:text-3xl">{title}</h3>
           <p className="mt-1 text-sm font-medium text-accent-light">{category}</p>
         </div>
         <p className="leading-relaxed text-text-secondary">{description}</p>
-        {highlights.map(({ label, items }) => items?.length ? (
-          <div key={label}>
-            <h4 className="mb-1.5 text-sm font-semibold">{label}</h4>
-            <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed text-text-secondary marker:text-accent-light">
-              {items.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-        ) : null)}
+        {highlights?.length ? (
+          <ul className="list-disc space-y-0.5 pl-5 text-sm leading-normal text-text-secondary marker:text-accent-light">
+            {highlights.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+        ) : null}
         <ProjectTechnologies technologies={technologies} />
         <ProjectLinks {...project} />
       </div>

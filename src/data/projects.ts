@@ -6,21 +6,14 @@ export const projects: readonly Project[] = [
     slug: 'pc-architect',
     title: 'PC Architect',
     category: 'Full Stack PC Building Platform',
-    description: 'A full-stack web application for creating, customizing and managing personal computer builds, with secure authentication, database integration and automated testing.',
+    description: 'A full-stack application for creating and managing custom PC builds.',
     featured: true,
-    features: [
-      'Custom PC configuration',
-      'Hardware component selection',
-      'User authentication and authorization',
-      'Personal build management',
-      'Responsive user interface',
-    ],
-    engineeringHighlights: [
-      'Next.js App Router architecture',
-      'PostgreSQL database with Prisma ORM',
+    highlights: [
+      'Hardware selection and personal build management',
+      'Authentication and protected user accounts',
+      'Next.js App Router and PostgreSQL integration',
       'Unit, integration and E2E testing',
-      'Docker containerization',
-      'CI/CD with GitHub Actions',
+      'Docker containerization and GitHub Actions CI/CD',
     ],
     technologies: [
       'Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Prisma',
@@ -32,15 +25,14 @@ export const projects: readonly Project[] = [
     slug: 'cursology',
     title: 'Cursology',
     category: 'Full Stack Educational Platform',
-    description: 'A full-stack educational web application built with a modern React frontend, REST API and MongoDB database.',
+    description: 'A full-stack educational application with a React frontend, REST API and MongoDB database.',
     featured: true,
-    engineeringHighlights: [
-      'Type-safe frontend and backend development',
+    highlights: [
+      'Type-safe frontend and backend architecture',
       'Centralized state management with Redux Toolkit',
-      'API integration with RTK Query',
-      'REST API with Node.js and Express.js',
+      'API integration and caching with RTK Query',
       'Reusable UI components with Storybook',
-      'MongoDB database integration',
+      'REST API and MongoDB integration',
     ],
     technologies: [
       'React', 'TypeScript', 'Redux Toolkit', 'RTK Query', 'Tailwind CSS',

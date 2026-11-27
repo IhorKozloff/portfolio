@@ -14,7 +14,7 @@ export function FeaturedProjects() {
         <SectionHeading id="projects-heading" description="A selection of applications I've designed and developed.">
           Featured Projects
         </SectionHeading>
-        <div className="grid gap-4 sm:gap-6">
+        <div className="grid gap-4 sm:gap-6 md:auto-rows-fr">
           {featuredProjects.map((project, index) => (
             <FeaturedProjectCard key={project.id} project={project} previewOnRight={index % 2 === 0} />
           ))}
